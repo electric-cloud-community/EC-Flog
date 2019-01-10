@@ -1,0 +1,14 @@
+<project name="EC-Flog" default="package" basedir=".">
+	<description>
+        Build the EC-Flog plugin
+    </description>
+
+    <property name="buildconfigdir" value="../Plugin-In-A-Box/scripts" />
+    
+	<!-- plugin specific properties -->
+	<property name="pluginKey" value="EC-Flog" />
+	<property name="pluginVersion" value="1.0" />
+	<property name="gwtModules" value=""/>
+
+    <import file="${buildconfigdir}/buildTargets.xml"/>
+</project>

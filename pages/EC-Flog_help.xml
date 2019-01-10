@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 25 March 2009), see www.w3.org" />
+  <meta content="text/html; charset=us-ascii" http-equiv=
+  "content-type" />
+
+  <title>ElectricFlow Plugin for Flog</title>
+  <link rel="stylesheet" href=
+  "../../plugins/@PLUGIN_KEY@/pluginhelp.css" type="text/css"
+  media="screen" />
+</head>
+
+<body>
+  <div class="help">
+    <h1>Flog</h1>
+
+    <p>Plugin Version @PLUGIN_VERSION@</p>
+    <hr style=
+    "margin-left: -10px; margin-top: 10px; height: 1px; width: 100%; color: #5981BD;"
+    noshade="noshade" />
+	<p>Revised on July 1, 2015</p>
+    <p>Flog is an analysis tool used to determine how difficult it
+    is to test given Ruby classes.<br />
+    Flog scores a set of files based on assignments, branches, and
+    calls, with particular attention placed on calls.</p>
+
+    <h2>Flog Links</h2>
+
+    <p>More information can be found at <a href=
+    "http://ruby.sadi.st/Flog.html">this website</a>.</p>
+
+    <h2>ElectricFlow Integration to Flog</h2>
+
+    <p>This plugin creates and executes a commandline against the
+    Ruby gem "Flog".</p>
+
+    <h2>Integrated Version</h2>
+
+    <p>This plugin was developed and tested against version
+    2.5.3.</p>
+    <hr style="margin-top: 20px; height: 2px; width: 100%;"
+    noshade="noshade" />
+
+    <h1>Plugin Procedures</h1>
+	<p>IMPORTANT: In the ElectricFlow UI, from the Home page, open the Main Menu, and click <b>Admin</b> > <b>Plugins</b> to open the Plugin Manager.</p>
+    <p>IMPORTANT: For all parameter descriptions below, required
+    parameters are shown in <span class='required'>bold
+    italics</span>.</p>
+
+    <div id="runFlog"><a name='runFlog' id="runFlog"></a>
+
+    <h3>runFlog</h3>
+
+    <p>This procedure allows you to determine how difficult it is
+    to test given Ruby classes.</p>
+
+    <table class="grid">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+
+          <th>Description</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class='required'>Flog installation path</td>
+
+          <td>Path where Flog script is located, default will
+          invoke flog. (Required)</td>
+        </tr>
+
+        <tr>
+          <td class='required'>Target to analyze</td>
+
+          <td>Path to ruby file or a directory containing ruby
+          files. (Required)</td>
+        </tr>
+
+        <tr>
+          <td>Verbose mode</td>
+
+          <td>If checked, it will display progress during
+          processing. (This is the command-line '--verbose'
+          option)</td>
+        </tr>
+
+        <tr>
+          <td>Display All</td>
+
+          <td>If checked, it displays all flog results, not top
+          60%. (This is the command-line '--all' option)</td>
+        </tr>
+
+        <tr>
+          <td>Continuous mode</td>
+
+          <td>Continue despite syntax errors. (This is the
+          command-line '--continue' option)</td>
+        </tr>
+
+        <tr>
+          <td>Group results</td>
+
+          <td>Group and sort by class. (This is the command-line
+          '--group' option)</td>
+        </tr>
+
+        <tr>
+          <td>Display Score</td>
+
+          <td>Display total score only. (This is the command-line
+          '--score' option)</td>
+        </tr>
+
+        <tr>
+          <td>Additional commands</td>
+
+          <td>Additional commands to be entered for flog.</td>
+        </tr>
+
+        <tr>
+          <td>Working directory</td>
+
+          <td>Directory where the job will be executed.</td>
+        </tr>
+      </tbody>
+    </table><img src="../../plugins/@PLUGIN_KEY@/images/Flog-3.png"
+    alt="Form" /></div>
+
+    <h1>Examples and Use Cases</h1>
+
+    <p>In this example we are going to use flog to analyze a simple
+    ruby file.</p>
+
+    <ol>
+      <li>Lets write some code for our test:<br />
+      <img src="../../plugins/@PLUGIN_KEY@/images/Flog-1.png" alt=
+      "Hanoi" /></li>
+
+      <li>Run the file and you will see something like this:<br />
+      <img src="../../plugins/@PLUGIN_KEY@/images/Flog-2.png" alt=
+      "Result" /></li>
+
+      <li>Now it's time to create an ElectricFlow procedure to run flog
+      from a step.<br />
+      To do that it is necessary to fill the parameter panel:<br />
+      <img src="../../plugins/@PLUGIN_KEY@/images/Flog-3.png" alt=
+      "Panel" /></li>
+
+      <li>Once you have filled the form you just need to run the
+      procedure and see the results:<br />
+      <img src="../../plugins/@PLUGIN_KEY@/images/Flog-4.png" alt=
+      "Log" /></li>
+    </ol>
+
+    <h1>Release Notes</h1>
+    <h2>@PLUGIN_KEY@-2.0.3</h2>    <ul>        <li>Renamed ElectricCommander to ElectricFlow.</li>    </ul>
+    <h2>@PLUGIN_KEY@-2.0.2</h2>
+
+    <ul>
+        <li>Procedure name(s) were changed in the step picker section</li>
+    </ul>
+    
+    <h2>@PLUGIN_KEY@-2.0.1</h2>
+    
+    <ul>
+      <li>Change Help page style.</li>
+    </ul>
+
+    <h2>@PLUGIN_KEY@-2.0.0</h2>
+
+    <ul>
+      <li>Code improvements</li>
+
+      <li>XML parameter panel</li>
+
+      <li>Help page was updated</li>
+    </ul>
+
+    <h2>@PLUGIN_KEY@-1.1.1</h2>
+
+    <ul>
+      <li>Code improvements</li>
+
+      <li>Add postp</li>
+    </ul>
+  </div>
+</body>
+</html>

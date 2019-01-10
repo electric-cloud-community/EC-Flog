@@ -1,0 +1,79 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#runFlog</help>
+    <formElement>
+        <type>entry</type>
+        <label>Flog installation path:</label>
+        <property>installpath</property>
+        <required>1</required>
+        <value>flog</value>
+        <documentation>Path where Flog script is located, default will invoke flog.</documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Target to analyze:</label>
+        <property>target</property>
+        <required>1</required>
+        <documentation>Path to ruby file or a directory containing ruby files.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Verbose mode:</label>
+        <property>verbose</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>If checked, it will display progress during processing.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Display All:</label>
+        <property>displayall</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>If checked, it displays all flog results, not top 60%.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Continuous mode:</label>
+        <property>continuousmode</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>Continue despite syntax errors.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Group results:</label>
+        <property>groupresults</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>Group and sort by class.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Display Score:</label>
+        <property>displayscore</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>Display total score only</documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Additional commands:</label>
+        <property>commands</property>
+        <required>0</required>
+        <documentation>Additional commands to be entered for flog</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Working directory:</label>
+        <property>workingdirectory</property>
+        <required>0</required>
+        <value></value>
+        <documentation>Directory where the job will be executed.</documentation>
+    </formElement>
+</editor>
+
